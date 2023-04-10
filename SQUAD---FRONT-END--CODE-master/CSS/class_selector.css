@@ -1,0 +1,42 @@
+
+
+/* universal selector */
+
+*{
+    font-family: 'Times New Roman', Times, serif;
+}
+
+
+
+body{
+    background-color: aquamarine;
+}
+
+
+/* class seletor */
+
+.container{
+    background-color: aliceblue;
+}
+
+
+.title{
+    text-align: center;
+}
+
+#para-1{
+    color: brown;
+}
+
+#para-2{
+    color: blue;
+}
+
+.para{
+    text-align: justify;
+}
+
+
+#heading-1 , #para-3{
+    color: blueviolet;
+}

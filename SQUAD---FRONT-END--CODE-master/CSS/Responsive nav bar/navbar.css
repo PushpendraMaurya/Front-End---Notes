@@ -1,0 +1,69 @@
+
+.nav-bar{
+    background-color:cadetblue;
+}
+
+.list{
+padding: 0px;
+}
+
+.list li{
+    margin: 0px;  
+    display: inline-block;
+}
+
+.list li a{
+    /* border: 1px solid black; */
+    display: inline-block;
+    padding: 10px ;
+    text-decoration: none;
+    color:aliceblue ;
+
+}
+.list li a:hover{
+    background-color: aliceblue;
+    color: cadetblue;
+}
+
+#form{
+    float: right;
+    padding: 4px 5px;
+}
+
+#search-input{
+    height: 20px;
+
+}
+
+#search-btn{
+    padding: 5px 10px;
+}
+
+@media(max-width:576px){
+    .list li{
+        margin: 0px;  
+        display: block;
+        
+    }
+
+    .list li a{
+        width: 100%;   
+    }
+
+    .list li a:hover{  
+        background-color: aliceblue;
+        color: cadetblue;
+        width: 96%;
+    }
+
+    #form{
+        float: none;
+        padding: 4px 5px;
+    }
+    #search-input{
+        height: 20px;
+        width: 82%;
+    }
+    
+    
+}

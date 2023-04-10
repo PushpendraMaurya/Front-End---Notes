@@ -1,0 +1,55 @@
+.nav-bar{
+    background-color: aqua;
+    
+}
+.list{
+    margin: 0px;
+    padding: 0px;
+    display: inline-block;
+
+}
+
+.list li{
+    padding: 0px;
+    display: inline-block;
+}
+
+.list li a{
+    display: inline-block;
+    text-decoration: none;
+    padding: 12px;
+}
+.list li a:hover{
+    background-color: gray;
+    color: white;
+}
+
+#form{
+    
+    float: right;
+    margin-top: 6px;
+    margin-right: 10px;
+}
+
+#search-input{
+    height: 25px;
+}
+
+#search-btn{
+    padding: 5px 10px;
+}
+
+
+@media (max-width:576px) and (min-width:){
+    .nav-bar{
+        background-color: black;
+        
+    }
+    .list{
+        display: inline-block;
+        margin: 0px;
+        padding: 0px;
+        display: inline-block;
+    
+    }
+}

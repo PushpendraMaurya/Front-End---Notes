@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <h2>Js Object</h2>
+
+    <script>
+        // var obj = {};
+        // console.log(typeof(obj));
+
+        // var a = {
+        //     firstName : 'Rahul',
+        //     lastName : 'More',
+        //     age : 22
+        // };
+        // console.log(a);
+
+        // 2 - Access Object Element
+
+        // 1 - by Property Name (Reco)
+        
+        // var fname = a['firstName'];
+        // var lname = a['lastName'];
+        // var age = a['age'];
+
+        // console.log(fname);
+        // console.log(lname);
+        // console.log(age);
+
+        // 2 - bt dot Operator
+
+        // var firstname = a.firstName;
+        // var lastname = a.lastName;
+        // var age = a.age;
+
+        // console.log(firstname);
+        // console.log(lastname);
+        // console.log(age);
+        
+
+        // 3 - Add Element 
+
+        var obj = {};
+        console.log(obj);
+        
+        // 1 - by property Name
+
+        obj['fname'] = 'Rahul'
+        
+        console.log(obj);
+
+        // 2 - dot Operator
+
+        obj.lname = 'More';
+        console.log(obj);
+
+        // 3 - built in method assign(target , source)
+            // return nre object data
+        var NewObj = Object.assign(obj , {'age':20})
+        console.log(NewObj);
+
+
+
+        // 4 - Delete Element
+
+        // delete keyword
+
+
+        delete obj.age;
+        console.log(obj);
+
+        delete obj['lname'];
+        console.log(obj)
+
+
+        // RegEx
+
+        var nameRegEx = /^[A-Za-z]+$/;
+
+        var name = 'Rahul';
+
+        console.log(nameRegEx.test(name));
+
+
+
+
+
+    </script>
+    
+</body>
+</html>

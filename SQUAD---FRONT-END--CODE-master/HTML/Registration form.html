@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Form</title>
+</head>
+
+<body>
+
+    <center>
+        <h2>Registration Form</h2>
+    </center>
+    <hr>
+
+    <!-- registration form container -->
+    <div>
+        <form action="">
+
+            <!-- first name -->
+            <div>
+                <label>Enter First Name</label>
+                <input type="text" name="fname" id="fname">
+            </div>
+
+            <!-- middle name -->
+            <div>
+                <label>Enter Middle Name</label>
+                <input type="text" name="mname" id="mname">
+            </div>
+
+            <!-- last name  -->
+            <div>
+                <label>Enter Last Name</label>
+                <input type="text" name="lname" id="lname">
+            </div>
+
+            <!-- Date of Birth -->
+            <div>
+                <label >Select D.O.B</label>
+                <input type="date" name="" id="">
+
+            </div>
+
+
+
+            <!-- gender Option  Radio-->
+            <div>
+                <p>Gender</p>
+                <div>
+                    
+                    <input type="radio" name="gender" id="male" value="Male"> 
+                    <label for="">Male</label>
+                </div>
+
+
+                <div>
+                    <input type="radio" name="gender" id="female" value="Female">
+                    <label for="">Female</label>
+                </div>
+
+                <div>
+                    <input type="radio" name="gender" id="others" value="others">
+                    <label for="">Others</label>
+                </div>
+
+            </div>
+
+
+            <!-- Language Checkbox -->
+            <div>
+                <p>Select Language</p>
+
+                <div>
+                    <input type="checkbox" name="hindi" id="hindi" value="Hindi">
+                    <label >Hindi</label>
+                </div>
+
+                <div>
+                    <input type="checkbox" name="english" id="english" value="English">
+                    <label >English</label>
+                </div>
+
+                <div>
+                    <input type="checkbox" name="marathi" id="marathi" value="Marathi">
+                    <label >Marathi</label>
+                </div>
+
+            </div>
+
+
+
+            <!-- select course Dropdown option -->
+
+            <div>
+                <p>Select Sourse</p>
+
+                <select name="course" id="course">
+                    <option selected>Select</option>
+
+                    <option value="python">Python</option>
+                    <option value="java">Java</option>
+                    <option value="HTML">HTML</option>
+                    <option value="SQL">SQL</option>
+                    <option value="CSS">CSS</option>
+
+                </select>
+
+            </div>
+
+            <!-- contact number  -->
+
+            <div>
+
+                <p>Contact No.</p>
+                <input type="text" value="+91" size="2">
+                <input type="text" name="contact" id="contact" placeholder="Enter Contact">
+            </div>
+
+
+            <!-- email -->
+
+            <div>
+                <label >Enter Email-ID</label>
+                <input type="email" name="email" id="email" placeholder="Enter Email">
+            </div>
+
+
+            <!-- address -->
+
+            <div>
+                <p>Enter Address</p>
+
+                <textarea name="address" id="address" cols="60" rows="10">Enter Address</textarea>
+            </div>
+
+
+            <!-- profile image -->
+            <div>
+
+                <label >Choose Profile Image</label>
+                <input type="file" name="" id="">
+            </div>
+
+
+            <!-- submit button -->
+            <div>
+
+                <!-- <button type="submit">Sumbit</button> -->
+                <input type="submit"  id="submit" value="Submit">
+
+                <!-- <button type="reset">Reset Form</button> -->
+                <input type="reset"  id="reset" value="Reset Form">
+
+            </div>
+
+
+        </form>
+
+    </div>
+
+
+</body>
+
+</html>

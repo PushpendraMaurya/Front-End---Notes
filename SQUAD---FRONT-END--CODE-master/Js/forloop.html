@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>for loop</title>
+</head>
+<body>
+
+    
+
+    <h2>Change Event Example </h2>
+    
+    <!-- dropdown div -->
+    <div>
+        <select name="dropdown" id="dropdown">
+
+            <option value="Python">Python</option>
+            <option value="Java">Java</option>
+
+            <option value="HTML">HTML</option>
+
+            <option value="CSS">CSS</option>
+
+            <option value="Bootstrao">Bootstrao</option>
+
+            <option value="JS">JS</option>
+
+        </select>
+
+    </div>
+
+    <!-- output div -->
+    <div>
+        <p id="msg"></p>
+    </div>
+
+
+    <script>
+
+        var drop = document.getElementById('dropdown');
+        var msg = document.getElementById('msg');
+
+        drop.addEventListener('mouseover' , dropdownfnc);
+        
+
+        function dropdownfnc(){
+
+            var value1 = drop.value ;
+            msg.innerHTML = `You Selected the option ${value1}`;
+            msg.style.backgroundColor = 'gray';
+            msg.style.color = 'white';
+            msg.style.padding = '10px'
+        }
+
+
+    </script>
+
+
+
+</body>
+</html>

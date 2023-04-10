@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- bootstrap CSS Link  -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+    <!-- Bootstrap Js Link -->
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+
+
+    <title>Login Form Validation</title>
+
+    <style>
+        #form-div {
+            width: 60%;
+            margin: 0px auto;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container my-3">
+
+        <!-- heading div -->
+        <div class="container text-center bg-secondary text-light p-2 rounded-3 shadow">
+            <h1 class="display-6">Register Form</h1>
+        </div>
+
+
+
+        <!-- form div -->
+        <div class="container my-4 shadow p-5" id="form-div">
+
+            <form action="" onsubmit="return FormValidation()">
+
+
+                <!-- name div -->
+                <div class="mb-3">
+                    <label for="name">Enter Your Name</label>
+                    <input type="text" name="name" id="name" class="form-control">
+                    <p id="nameMsg"></p>
+                </div>
+
+                <!-- username div -->
+                <div class="mb-3">
+                    <label for="username">Enter Your Username</label>
+                    <input type="text" name="username" id="username" class="form-control">
+                    <p id="usernameMsg"></p>
+                </div>
+
+                <!-- contact div -->
+                <div class="mb-3">
+                    <label for="contact">Enter Your Contact</label>
+                    <input type="text" name="contact" id="contact" class="form-control">
+                    <p id="contactMsg"></p>
+                </div>
+
+
+                <!-- email div -->
+                <div class="mb-3">
+                    <label for="email">Enter Your Email-ID</label>
+                    <input type="text" name="contact" id="email" class="form-control">
+                    <p id="emailMsg"></p>
+                </div>
+
+                <!-- password div -->
+                <div class="mb-3">
+                    <label for="pass1">Enter Your Password</label>
+                    <input type="password" name="pass1" id="pass1" class="form-control">
+                    <p id="passMsg1"></p>
+                </div>
+
+                <!-- confirm password div -->
+                <div class="mb-3">
+                    <label for="pass2">Confirm Password</label>
+                    <input type="password" name="pass2" id="pass2" class="form-control">
+                    <p id="passMsg2"></p>
+
+                </div>
+
+                <!-- show button  div -->
+                <div class="mb-3">
+                    <input type="checkbox" name="showpass" id="showpass">
+                    <label for="showpass">Show Password</label>
+                </div>
+
+                <!-- submit div -->
+                <div class="mb-3">
+                    <input type="submit" value="Register" class="btn btn-success">
+                </div>
+
+
+
+            </form>
+
+        </div>
+
+
+
+    </div>
+
+
+    <script>
+
+        // show password functionality
+
+        var showpass = document.getElementById('showpass');
+        var pass1 = document.getElementById('pass1');
+        var pass2 = document.getElementById('pass2');
+
+        showpass.addEventListener('click', showpassfunc);
+
+        function showpassfunc() {
+            // console.log('working');
+
+            if (pass1.type == 'password' || pass2.type == 'password') {
+                pass1.type = 'text';
+                pass2.type = 'text';
+            }
+            else {
+                pass1.type = 'password';
+                pass2.type = 'password';
+            }
+        }
+
+
+        // Form Validation 
+        function FormValidation() {
+
+            var name = document.getElementById('name').value;
+            var username = document.getElementById('username').value;
+            var contact = document.getElementById('contact').value;
+            var email = document.getElementById('email').value;
+            var pass1 = document.getElementById('pass1').value;
+            var pass2 = document.getElementById('pass2').value;
+
+            // console.log(name)
+            // console.log(username)
+            // console.log(contact)
+            // console.log(email)
+            // console.log(pass1)
+            // console.log(pass2)
+
+            var nameRegEx = /^[a-zA-Z\ ]+$/;
+
+            var usernameRegEx = /^[a-zA-Z0-9]+$/
+
+
+            // Empty Fields 
+            if (name == "" || username == "" || contact == "" || email == '' || pass1 == "" || pass2 == "") {
+
+                // name field 
+                if (name == "") {
+                    var nameMsg = document.getElementById('nameMsg');
+                    nameMsg.innerHTML = 'Name Field is Empty';
+                    nameMsg.style.color = 'red';
+                    return false;
+                }
+                else {
+                    var nameMsg = document.getElementById('nameMsg');
+                    nameMsg.innerHTML = '';
+
+
+                }
+
+                // username 
+                if (username == "") {
+                    var usernameMsg = document.getElementById('usernameMsg');
+                    usernameMsg.innerHTML = 'Username Field is Empty';
+                    usernameMsg.style.color = 'red';
+                    return false;
+                }
+                else {
+                    var usernameMsg = document.getElementById('usernameMsg');
+                    usernameMsg.innerHTML = '';
+                }
+
+                // contact field 
+                if (contact == "") {
+                    var contactMsg = document.getElementById('contactMsg');
+                    contactMsg.innerHTML = 'Contact Field is Empty';
+                    contactMsg.style.color = 'red';
+                    return false;
+                }
+                else {
+                    var contactMsg = document.getElementById('contactMsg');
+                    contactMsg.innerHTML = '';
+                }
+
+                // email field 
+                if (email == "") {
+                    var emailMsg = document.getElementById('emailMsg');
+                    emailMsg.innerHTML = 'Contact Field is Empty';
+                    emailMsg.style.color = 'red';
+                    return false;
+                }
+                else {
+                    var emailMsg = document.getElementById('emailMsg');
+                    emailMsg.innerHTML = '';
+                }
+
+                // password field 
+                if (pass1 == "") {
+                    var passMsg1 = document.getElementById('passMsg1');
+                    passMsg1.innerHTML = 'Contact Field is Empty';
+                    passMsg1.style.color = 'red';
+                    return false;
+                }
+                else {
+                    var passMsg1 = document.getElementById('passMsg1');
+                    passMsg1.innerHTML = '';
+                }
+
+                // confirm password field 
+                if (pass2 == "") {
+                    var passMsg2 = document.getElementById('passMsg2');
+                    passMsg2.innerHTML = 'Contact Field is Empty';
+                    passMsg2.style.color = 'red';
+                    return false;
+                }
+                else {
+                    var passMsg2 = document.getElementById('passMsg1');
+                    passMsg2.innerHTML = '';
+                }
+            }
+
+            // name validation 
+
+            if (name != "") {
+
+                if (name.length <= 2) {
+                    var nameMsg = document.getElementById('nameMsg');
+                    nameMsg.innerHTML = 'Name Should be greater than 2 charac';
+                    nameMsg.style.color = 'red';
+                    return false
+                }
+                if (name.length >= 20) {
+                    var nameMsg = document.getElementById('nameMsg');
+                    nameMsg.innerHTML = 'Name Should be Less than 20 charac';
+                    nameMsg.style.color = 'red';
+                    return false
+                }
+
+                if (!nameRegEx.test(name)) {
+                    var nameMsg = document.getElementById('nameMsg');
+                    nameMsg.innerHTML = 'Invalid Name';
+                    nameMsg.style.color = 'red';
+                    return false
+                }
+
+            }
+
+            // username Validation
+
+            if (username != "") {
+
+                if (!usernameRegEx.test(username)) {
+                    var usernameMsg = document.getElementById('usernameMsg');
+                    usernameMsg.innerHTML = 'Invald userName';
+                    usernameMsg.style.color = 'red';
+                    return false;
+                }
+            }
+
+            // contact validation 
+            if (contact != "") {
+                
+                var ContactRegEx = /^[6-9]+[0-9]+$/;
+
+                if ( contact.length < 10 || contact.length > 10) {
+                    var contactMsg = document.getElementById('contactMsg');
+                    contactMsg.innerHTML = 'Contact must be 10 Digit';
+                    contactMsg.style.color = 'red';
+                    return false;
+                }
+
+                if (!ContactRegEx.test(contact)){
+
+                    var contactMsg = document.getElementById('contactMsg');
+                    contactMsg.innerHTML = 'Invalid Contact';
+                    contactMsg.style.color = 'red';
+                    return false;
+                }
+            }
+
+
+        }
+
+
+
+    </script>
+
+</body>
+
+</html>

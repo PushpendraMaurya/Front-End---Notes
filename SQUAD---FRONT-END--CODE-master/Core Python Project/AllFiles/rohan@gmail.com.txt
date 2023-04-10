@@ -1,0 +1,6 @@
+User Name : rohan
+User Contact : 9876543210
+User Email-ID : rohan@gmail.com
+User Address : mumbai
+Account Creation Date : 2023-01-16
+User Account NUmber : 1000000

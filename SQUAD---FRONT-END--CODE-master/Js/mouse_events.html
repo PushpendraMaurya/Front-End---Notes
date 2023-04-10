@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>mouse events</title>
+</head>
+<body>
+
+
+    <p id="para" style="border:1px solid black  ;">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aperiam molestiae repellendus dicta quasi porro numquam hic est fugit eligendi in sapiente autem assumenda optio, nemo cum doloremque aut quam veritatis. Voluptas provident nihil suscipit sunt deleniti quasi necessitatibus, nemo dolore illum dolor enim nisi eveniet quis tempore excepturi accusamus nesciunt.</p>
+    
+    <script>
+
+        var p = document.getElementById('para');
+
+        p.addEventListener('mouseover' , mouseover_func);
+        p.addEventListener('mouseout' , mouseout_func)
+
+        function mouseover_func(){
+            p.style.backgroundColor = 'gray';
+            p.style.color = 'white';
+        }
+
+        function mouseout_func(){
+            p.style.backgroundColor = 'white';
+            p.style.color = 'black';
+        }
+
+
+    </script>
+
+
+</body>
+</html>

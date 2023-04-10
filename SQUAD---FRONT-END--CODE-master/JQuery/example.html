@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <!-- JQUERY LINK  -->
+
+    <script src="https://code.jquery.com/jquery-3.6.3.min.js" integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU=" crossorigin="anonymous"></script>
+
+
+</head>
+<body>
+
+    <center><h1>Display Effects</h1></center>
+
+    <div>
+
+        <div>
+            <button id="showbtn">Show button</button>
+            <button id="hidebtn">Hide button</button>
+            <button id="togglebtn">Toggle button</button>
+
+        </div>
+        <p id="para">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit repellendus illo alias, quasi exercitationem sint vel non repellat commodi impedit quibusdam asperiores minus. Illum praesentium debitis, pariatur ratione incidunt quibusdam, dolorem nihil ea sed delectus id? Tempore ea sed, quisquam laudantium quidem, autem modi, non nam harum asperiores dolore ipsam consectetur reprehenderit ab. Minima veniam rerum libero. Autem nobis perferendis veritatis odio eum similique non quos assumenda quis, nesciunt veniam consequatur dignissimos eius facere fugiat officia mollitia optio. Dignissimos doloremque cumque voluptatem. Minus in optio harum ipsam fugiat, nisi veniam architecto reiciendis sit laborum ducimus cum enim sapiente molestias a suscipit corrupti iure asperiores explicabo, natus sint ut unde! Atque sequi vitae dicta sunt dolore? Corrupti laudantium laboriosam totam mollitia ipsa provident exercitationem non. Unde iste incidunt eos, ratione dolorum illo quam illum doloremque reprehenderit natus quis quod, dolorem expedita est eveniet deleniti itaque blanditiis accusantium. Tenetur ex fugit quos officia porro aliquid velit perferendis. Cumque, reprehenderit consequuntur repellat aut accusantium maiores dignissimos consequatur, ad facilis eaque officiis et labore qui non, est eveniet cupiditate! Nesciunt veritatis officia modi est incidunt tempora cupiditate amet dolore. Similique doloremque deleniti voluptas assumenda quaerat ea at neque ipsa. Voluptatum provident iure voluptatibus sint!</p>
+
+
+
+    </div>
+
+
+    <script>
+        $(document).ready(function(){
+
+            // hide  
+            $('#hidebtn').click(function(){
+                $('#para').hide(1000)
+            })
+
+            // hide 
+            $('#showbtn').click(function(){
+                $('#para').show(1000)
+            })
+
+            // toggle 
+            $('#togglebtn').click(function(){
+                $('#para').toggle(1000)
+            })
+        })
+
+
+    </script>
+
+    
+</body>
+</html>

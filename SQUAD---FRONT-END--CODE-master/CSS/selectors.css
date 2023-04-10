@@ -1,0 +1,16 @@
+
+/* element selector */
+body{
+    background-color: aquamarine;
+}
+
+
+/* 2- id selector */
+
+#heading-1{
+    color: brown;
+}
+
+#para-1{
+    background-color: aliceblue;
+}

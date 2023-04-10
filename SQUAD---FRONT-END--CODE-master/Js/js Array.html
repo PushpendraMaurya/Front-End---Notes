@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <h4>Array Example </h4>
+
+    <script>
+        //1 -  create array
+
+        // var arr = [];   //empty array 
+        // console.log(arr , typeof(arr));
+
+
+        // // class method 
+        // var arr1 = new Array();   //empty array
+        // console.log(arr1 , typeof(arr1));
+
+
+        // var arr2 = [1,2,3,4,5,6];  
+        // console.log(arr2);
+
+        var arr = new Array(1,2,3,4,5,6);
+        console.log(arr);
+
+        // 2 - Add Element 
+
+        // 1 - unshift
+        arr.unshift(10); 
+        console.log(arr);
+
+        // 2 - push()
+        arr.push(100);
+        console.log(arr);
+        
+        // 3 - splice() 
+
+        arr.splice(1 , 0 , 200 );
+        console.log(arr);
+
+        // 3 - Access Array Element
+
+        console.log(arr[1]);
+
+        // 4 - modify 
+
+        arr[1] = 500;
+        console.log(arr)
+
+        // 5 - Delete Element
+
+        // 1 - shift()
+        arr.shift();
+        console.log(arr);
+
+        // 2 - pop()
+        arr.pop();
+        console.log(arr);
+
+        // 3 - splic()
+
+        arr.splice(0 , 1);
+        console.log(arr);
+
+        // 4 - delete
+
+        // delete arr[2];
+        console.log(arr.length);
+
+
+    </script>
+    
+</body>
+</html>
